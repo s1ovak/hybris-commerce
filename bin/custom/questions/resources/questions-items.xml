@@ -6,9 +6,55 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
 
-	<itemtypes>
-	</itemtypes>
+	<relations>
+		<relation code="Question2Product" localized="false">
+			<sourceElement type="Question" qualifier="questions" collectiontype="set" cardinality="many">
+				<modifiers read="true" write="true" search="true"/>
+			</sourceElement>
+			<targetElement type="Product" qualifier="product" cardinality="one">
+				<modifiers read="true" write="true" search="true"/>
+			</targetElement>
+		</relation>
+	</relations>
+	
+    <itemtypes>
+        <itemtype code="Question" generate="true" autocreate="true">
+            <deployment table="questions" typecode="15000"/>
+            <attributes>
+                <attribute qualifier="code" type="java.lang.String">
+                    <description>code of question</description>
+                    <persistence type="property"/>
+					<defaultvalue>null</defaultvalue>
+                    <modifiers optional="false" unique="true" read="true" write="true"/>
+                </attribute>
+                <attribute qualifier="question" type="java.lang.String">
+                    <description>text of question</description>
+                    <persistence type="property"/>
+					<defaultvalue>null</defaultvalue>
+					<modifiers optional="false" read="true" write="true"/>
+                </attribute>
+				<attribute qualifier="answer" type="java.lang.String">
+					<description>answer for question</description>
+					<persistence type="property"/>
+					<defaultvalue>null</defaultvalue>
+					<modifiers optional="false" read="true" write="true"/>
+				</attribute>
+                <attribute qualifier="questionCustomer" type="Customer">
+                    <description>customer of question</description>
+                    <persistence type="property"/>
+					<defaultvalue>null</defaultvalue>
+					<modifiers optional="false" read="true" write="true"/>
+                </attribute>
+				<attribute qualifier="answerCustomer" type="Customer">
+					<description>customer of answer for question</description>
+					<persistence type="property"/>
+					<defaultvalue>null</defaultvalue>
+					<modifiers optional="false" read="true" write="true"/>
+				</attribute>
+            </attributes>
+        </itemtype>
+    </itemtypes>
 </items>

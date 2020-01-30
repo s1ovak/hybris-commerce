@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://www.zeroturnaround.com">
+  <classpath>
+    <dir name="C:\hybris\hybris\bin\modules\base-accelerator\trainingbackoffice/backoffice/classes" />
+  </classpath>
+</application>

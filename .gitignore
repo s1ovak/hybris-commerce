@@ -1,0 +1,10 @@
+/log
+/temp
+/bin/*
+!/bin/custom
+/roles
+/data
+/config/solr/instances/default
+/idea-module-files
+.idea
+*.iml

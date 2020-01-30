@@ -4,6 +4,10 @@
 
 <%@ taglib prefix="cms" tagdir="/WEB-INF/tags/responsive/template/cms" %>
 
+<%-- google webfonts --%>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<cms:previewCSS cmsPageRequestContextData="${cmsPageRequestContextData}" />
+
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" />
 <c:choose>
 	<c:when test="${wro4jEnabled}">

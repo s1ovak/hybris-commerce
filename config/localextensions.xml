@@ -95,5 +95,6 @@
     <extension name='merchandisingservices' />
     <extension name='merchandisingservicesbackoffice' />
     <extension name='merchandisingstorefrontsampledataaddon' />
+    <extension name='questions' />
   </extensions>
 </hybrisconfig>

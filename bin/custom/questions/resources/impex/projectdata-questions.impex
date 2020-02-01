@@ -1,0 +1,4 @@
+INSERT_UPDATE Question; code[unique = true]; question                                ; answer                         ; questionCustomer(uid); answerCustomer(uid)
+                      ; A001               ; How can i see my cart?                  ; You can click minicart button. ; anonymous            ; anonymous
+                      ; A002               ; What is plp?                            ; Product List Page              ; anonymous            ; anonymous
+                      ; A003               ; Who can help me with money transaction? ; You cat write to support       ; anonymous            ; anonymous

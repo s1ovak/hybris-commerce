@@ -57,7 +57,7 @@
             </attributes>
         </itemtype>
 
-        <itemtype code="QuestionsCMSComponent" extends="SimpleCMSComponent">
+        <itemtype code="QuestionsCMSComponent" extends="ProductDetailComponent">
             <attributes>
                 <attribute qualifier="numberOfQuestionsToShow" type="java.lang.Integer">
                     <description>max number of question on page</description>

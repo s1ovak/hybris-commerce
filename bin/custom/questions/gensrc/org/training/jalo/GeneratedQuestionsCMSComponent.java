@@ -1,12 +1,12 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 1 февр. 2020 г., 23:51:12                   ---
+ * --- Generated at 5 февр. 2020 г., 23:27:10                   ---
  * ----------------------------------------------------------------
  */
 package org.training.jalo;
 
-import de.hybris.platform.cms2.jalo.contents.components.SimpleCMSComponent;
+import de.hybris.platform.cms2lib.components.ProductDetailComponent;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.SessionContext;
 import java.util.Collections;
@@ -15,10 +15,10 @@ import java.util.Map;
 import org.training.constants.QuestionsConstants;
 
 /**
- * Generated class for type {@link de.hybris.platform.cms2.jalo.contents.components.SimpleCMSComponent QuestionsCMSComponent}.
+ * Generated class for type {@link de.hybris.platform.cms2lib.components.ProductDetailComponent QuestionsCMSComponent}.
  */
 @SuppressWarnings({"deprecation","unused","cast"})
-public abstract class GeneratedQuestionsCMSComponent extends SimpleCMSComponent
+public abstract class GeneratedQuestionsCMSComponent extends ProductDetailComponent
 {
 	/** Qualifier of the <code>QuestionsCMSComponent.numberOfQuestionsToShow</code> attribute **/
 	public static final String NUMBEROFQUESTIONSTOSHOW = "numberOfQuestionsToShow";
@@ -27,7 +27,7 @@ public abstract class GeneratedQuestionsCMSComponent extends SimpleCMSComponent
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
 	{
-		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>(SimpleCMSComponent.DEFAULT_INITIAL_ATTRIBUTES);
+		final Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>(ProductDetailComponent.DEFAULT_INITIAL_ATTRIBUTES);
 		tmp.put(NUMBEROFQUESTIONSTOSHOW, AttributeMode.INITIAL);
 		tmp.put(FONTSIZE, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);

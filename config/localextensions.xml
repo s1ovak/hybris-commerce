@@ -8,10 +8,6 @@
     <extension name='commerceservicesbackoffice' />
     <extension name='solrfacetsearchbackoffice' />
     <extension name='solrserver' />
-    <extension name='yacceleratorbackoffice' />
-    <extension name='yacceleratorinitialdata' />
-    <extension name='yacceleratorfulfilmentprocess' />
-    <extension name='yacceleratorstorefront' />
     <extension name='ycommercewebservices' />
     <extension name='ycommercewebservicestest' />
     <extension name='electronicsstore' />
@@ -95,6 +91,13 @@
     <extension name='merchandisingservices' />
     <extension name='merchandisingservicesbackoffice' />
     <extension name='merchandisingstorefrontsampledataaddon' />
+    <extension name="trainingbackoffice"/>
+    <extension name="trainingcore"/>
+    <extension name="trainingfacades"/>
+    <extension name="trainingfulfilmentprocess"/>
+    <extension name="traininginitialdata"/>
+    <extension name="trainingstorefront"/>
+    <extension name="trainingtest"/>
     <extension name='questions' />
   </extensions>
 </hybrisconfig>

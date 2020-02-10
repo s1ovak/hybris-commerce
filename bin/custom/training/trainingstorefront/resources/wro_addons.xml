@@ -4,6 +4,17 @@
    <group name="addons_responsive">
       <js>/_ui/addons/questions/responsive/common/js/questions.js</js>
       <css>/_ui/addons/questions/responsive/common/css/questions.css</css>
+      <js>/_ui/addons/profiletagaddon/responsive/common/js/profiletagaddon.js</js>
+      <js>/_ui/addons/profiletagaddon/responsive/common/js/acc.product.js</js>
+      <css>/_ui/addons/profiletagaddon/responsive/common/css/profiletagaddon.css</css>
+      <js>/_ui/addons/assistedservicestorefront/responsive/common/js/assistedservicestorefront.js</js>
+      <js>/_ui/addons/assistedservicestorefront/responsive/common/js/jquery.tablesorter.pager.js</js>
+      <js>/_ui/addons/assistedservicestorefront/responsive/common/js/jquery.tablesorter.min.js</js>
+      <js>/_ui/addons/assistedservicestorefront/responsive/common/js/Chart.min.js</js>
+      <js>/_ui/addons/assistedservicestorefront/responsive/common/js/asm.storefinder.js</js>
+      <css>/_ui/addons/assistedservicestorefront/responsive/common/css/assistedservicestorefront.css</css>
+      <css>/_ui/addons/assistedservicestorefront/responsive/common/css/storeFinder.css</css>
+      <css>/_ui/addons/assistedservicestorefront/responsive/common/css/customer360.css</css>
    </group>
 </groups>
 

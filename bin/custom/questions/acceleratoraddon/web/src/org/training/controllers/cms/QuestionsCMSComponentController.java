@@ -13,8 +13,8 @@ import org.training.model.QuestionsCMSComponentModel;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Controller
-@RequestMapping(value = "/views/" + QuestionsCMSComponentModel._TYPECODE + "Controller")
+@Controller(QuestionsCMSComponentModel._TYPECODE + "Controller")
+@RequestMapping(value = "/view/" + QuestionsCMSComponentModel._TYPECODE + "Controller")
 public class QuestionsCMSComponentController extends AbstractCMSAddOnComponentController<QuestionsCMSComponentModel> {
 
     private QuestionFacade questionFacade;

@@ -1,0 +1,4 @@
+$solrIndexedType = electronicsProductType
+
+INSERT_UPDATE SolrIndexedProperty; solrIndexedType(identifier)[unique = true]; name[unique = true]; type(code); sortableType(code); currency[default = false]; localized[default = false]; multiValue[default = false]; useForSpellchecking[default = false]; useForAutocomplete[default = false]; fieldValueProvider    ; valueProviderParameter
+                                 ; $solrIndexedType                          ; questionСount      ; int       ;                   ;                          ;                           ;                            ;                                     ;                                    ; springELValueProvider ;

@@ -1,6 +1,6 @@
 package org.training.facades.impl;
 
-import de.hybris.platform.cmsfacades.data.ProductData;
+import de.hybris.platform.commercefacades.product.data.ProductData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.training.facades.QuestionFacade;

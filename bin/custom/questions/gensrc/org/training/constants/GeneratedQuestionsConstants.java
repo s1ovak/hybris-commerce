@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 30 янв. 2020 г., 15:39:17                   ---
+ * --- Generated at 10 февр. 2020 г., 12:21:12                  ---
  * ----------------------------------------------------------------
  */
 package org.training.constants;
@@ -17,6 +17,7 @@ public class GeneratedQuestionsConstants
 	public static class TC
 	{
 		public static final String QUESTION = "Question".intern();
+		public static final String QUESTIONSCMSCOMPONENT = "QuestionsCMSComponent".intern();
 	}
 	public static class Attributes
 	{

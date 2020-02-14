@@ -9,17 +9,17 @@
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="items.xsd">
 
-	<relations>
-		<relation code="Question2Product" localized="false">
-			<sourceElement type="Question" qualifier="questions" collectiontype="set" cardinality="many">
-				<modifiers read="true" write="true" search="true"/>
-			</sourceElement>
-			<targetElement type="Product" qualifier="product" cardinality="one">
-				<modifiers read="true" write="true" search="true"/>
-			</targetElement>
-		</relation>
-	</relations>
-	
+    <relations>
+        <relation code="Question2Product" localized="false">
+            <sourceElement type="Question" qualifier="questions" collectiontype="set" cardinality="many">
+                <modifiers read="true" write="true" search="true"/>
+            </sourceElement>
+            <targetElement type="Product" qualifier="product" cardinality="one">
+                <modifiers read="true" write="true" search="true"/>
+            </targetElement>
+        </relation>
+    </relations>
+
     <itemtypes>
         <itemtype code="Question" generate="true" autocreate="true">
             <deployment table="questions" typecode="15000"/>
@@ -27,31 +27,48 @@
                 <attribute qualifier="code" type="java.lang.String">
                     <description>code of question</description>
                     <persistence type="property"/>
-					<defaultvalue>null</defaultvalue>
+                    <defaultvalue>null</defaultvalue>
                     <modifiers optional="false" unique="true" read="true" write="true"/>
                 </attribute>
                 <attribute qualifier="question" type="java.lang.String">
                     <description>text of question</description>
                     <persistence type="property"/>
-					<defaultvalue>null</defaultvalue>
-					<modifiers optional="false" read="true" write="true"/>
+                    <defaultvalue>null</defaultvalue>
+                    <modifiers optional="false" read="true" write="true"/>
                 </attribute>
-				<attribute qualifier="answer" type="java.lang.String">
-					<description>answer for question</description>
-					<persistence type="property"/>
-					<defaultvalue>null</defaultvalue>
-					<modifiers optional="false" read="true" write="true"/>
-				</attribute>
+                <attribute qualifier="answer" type="java.lang.String">
+                    <description>answer for question</description>
+                    <persistence type="property"/>
+                    <defaultvalue>null</defaultvalue>
+                    <modifiers optional="false" read="true" write="true"/>
+                </attribute>
                 <attribute qualifier="questionCustomer" type="Customer">
                     <description>customer of question</description>
                     <persistence type="property"/>
-					<defaultvalue>null</defaultvalue>
+                    <defaultvalue>null</defaultvalue>
+                    <modifiers optional="false" read="true" write="true"/>
+                </attribute>
+                <attribute qualifier="answerCustomer" type="Customer">
+                    <description>customer of answer for question</description>
+                    <persistence type="property"/>
+                    <defaultvalue>null</defaultvalue>
+                    <modifiers optional="false" read="true" write="true"/>
+                </attribute>
+            </attributes>
+        </itemtype>
+
+        <itemtype code="QuestionsCMSComponent" extends="ProductDetailComponent">
+            <attributes>
+                <attribute qualifier="numberOfQuestionsToShow" type="java.lang.Integer">
+                    <description>max number of question on page</description>
+                    <persistence type="property"/>
+					<defaultvalue>3</defaultvalue>
 					<modifiers optional="false" read="true" write="true"/>
                 </attribute>
-				<attribute qualifier="answerCustomer" type="Customer">
-					<description>customer of answer for question</description>
+				<attribute qualifier="fontSize" type="java.lang.Integer">
+					<description>size of font</description>
 					<persistence type="property"/>
-					<defaultvalue>null</defaultvalue>
+					<defaultvalue>14</defaultvalue>
 					<modifiers optional="false" read="true" write="true"/>
 				</attribute>
             </attributes>

@@ -54,7 +54,7 @@
                 <c:set var="orderCancellable" value="${order.cancellable}" scope="request"/>
                 <c:set var="orderReturnable" value="${order.returnable}" scope="request"/>
                 <action:actions element="div" parentComponent="${component}"/>
-                <script type="text/javascript" src="/trainingstorefront/_ui/addons/orderselfserviceaddon/responsive/common/js/orderselfserviceaddon.js"></script>
+                <script type="text/javascript" src="/yacceleratorstorefront/_ui/addons/orderselfserviceaddon/responsive/common/js/orderselfserviceaddon.js"></script>
             </div>
         </div>
     </div>

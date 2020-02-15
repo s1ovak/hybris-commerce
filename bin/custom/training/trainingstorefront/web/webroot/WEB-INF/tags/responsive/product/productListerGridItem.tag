@@ -23,10 +23,6 @@
         <a class="thumb" href="${fn:escapeXml(productUrl)}" title="${fn:escapeXml(product.name)}">
             <product:productPrimaryImage product="${product}" format="product"/>
         </a>
-        <c:if test="${product.questionCount > 0}">
-            <spring:theme code="img.discussedImage" text="/" var="discussedImage"/>
-            <img src="/trainingstorefront${discussedImage}"/>
-        </c:if>
         <div class="details">
 
             <ycommerce:testId code="product_productName">

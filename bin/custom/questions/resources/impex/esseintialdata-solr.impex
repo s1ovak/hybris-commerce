@@ -2,3 +2,13 @@ $solrIndexedType = electronicsProductType
 
 INSERT_UPDATE SolrIndexedProperty; solrIndexedType(identifier)[unique = true]; name[unique = true]; type(code); sortableType(code); currency[default = false]; localized[default = false]; multiValue[default = false]; useForSpellchecking[default = false]; useForAutocomplete[default = false]; fieldValueProvider    ; valueProviderParameter
                                  ; $solrIndexedType                          ; questionCount      ; int       ;                   ;                          ;                           ;                            ;                                     ;                                    ; springELValueProvider ;
+
+INSERT_UPDATE SolrValueRangeSet; name[unique = true]; qualifier; type; solrValueRanges(&rangeValueRefID)
+                               ; questionRange      ; Number   ; int ; questionCountRange1,questionCountRange2
+
+INSERT_UPDATE SolrValueRange; &rangeValueRefID    ; solrValueRangeSet(name)[unique = true]; name[unique = true]; from; to
+                            ; questionCountRange1 ; questionRange                         ; 0-3                ; 0   ; 3
+                            ; questionCountRange2 ; questionRange                         ; 4-6                ; 4   ; 6
+
+INSERT_UPDATE SolrIndexedProperty; solrIndexedType(identifier)[unique = true]; name[unique = true]   ; type(code); currency[default = false]; localized[default = false]; multiValue[default = false]; facet[default = true]; facetType(code); facetSort(code); priority; visible; useForSpellchecking[default = false]; useForAutocomplete[default = false]; fieldValueProvider    ; rangeSets(name); valueProviderParameter
+                                 ; $solrIndexedType                          ; questionCountRangeSet ; int       ;                          ;                           ;                            ;                      ; MultiSelectOr  ; Count          ; 5000    ; true   ;                                     ;                                    ; springELValueProvider ; questionRange  ; questionCount

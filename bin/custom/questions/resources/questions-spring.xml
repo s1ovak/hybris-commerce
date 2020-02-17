@@ -46,4 +46,9 @@
         <property name="list" ref="commerceSearchResultProductConverter"/>
         <property name="add"  ref="searchResultQuestionCountPopulator"/>
     </bean>
+
+    <bean id="hybrisPointOfServiceFacetDisplayNameProvider"
+          class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider">
+        <property name="pointOfServiceService" ref="pointOfServiceService" />
+    </bean>
 </beans>

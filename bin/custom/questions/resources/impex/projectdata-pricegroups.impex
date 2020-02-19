@@ -1,0 +1,26 @@
+$regulargroup = regulargroup
+$customergroup = customergroup
+$hybridsgroup = hybrids
+
+INSERT_UPDATE UserPriceGroup; code[unique = true]
+                            ; hybridsPriceGroup
+
+INSERT_UPDATE Usergroup; uid[unique = true]; groups(uid)[mode = append]; userPriceGroup(code)
+                       ; $hybridsgroup     ; $customergroup            ; hybridsPriceGroup
+
+
+# Macros / Replacement Parameter definitions
+$productCatalog = electronicsProductCatalog
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Online'])[unique=true, default=$productCatalog:Online]
+$product = product(code, $catalogVersion)[unique=true]
+$currency = currency(isocode)[unique=true]
+$ug = ug(code[default=hybridsPriceGroup])[unique=true]
+$minqtd = minqtd[default=1]
+$unitFactor = unitFactor[default=1]
+$unit = unit(code[default=pieces])
+
+INSERT_UPDATE PriceRow; $product; price; $currency; $ug; $minqtd; $unitFactor; $catalogVersion; $unit
+                      ; 300938  ; 3,50 ; USD      ;
+                      ; 1992693 ; 1,50 ; USD      ;
+
+

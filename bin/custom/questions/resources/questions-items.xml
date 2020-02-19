@@ -84,5 +84,16 @@
                 </attribute>
             </attributes>
         </itemtype>
+        
+        <itemtype code="Customer" generate="false" autocreate="false">
+            <attributes>
+                <attribute qualifier="isInternal" type="java.lang.Boolean">
+                    <description>flag to indicate if user is internal</description>
+                    <defaultvalue>false</defaultvalue>
+                    <persistence type="dynamic" attributeHandler="dynamicHybrisCustomerAttributeBean"/>
+                    <modifiers read="true" write="true" optional="true"/>
+                </attribute>
+            </attributes>
+        </itemtype>
     </itemtypes>
 </items>

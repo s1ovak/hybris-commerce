@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 12 февр. 2020 г., 23:52:38                  ---
+ * --- Generated at 19 февр. 2020 г., 17:05:52                  ---
  * ----------------------------------------------------------------
  */
 package org.training.constants;
@@ -21,6 +21,10 @@ public class GeneratedQuestionsConstants
 	}
 	public static class Attributes
 	{
+		public static class Customer
+		{
+			public static final String ISINTERNAL = "isInternal".intern();
+		}
 		public static class Product
 		{
 			public static final String QUESTIONCOUNT = "questionCount".intern();

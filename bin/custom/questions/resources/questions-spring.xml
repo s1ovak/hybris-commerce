@@ -51,4 +51,13 @@
           class="de.hybris.platform.commerceservices.search.solrfacetsearch.provider.impl.PointOfServiceFacetDisplayNameProvider">
         <property name="pointOfServiceService" ref="pointOfServiceService" />
     </bean>
+
+    <bean id="hybridCustomersPrepareInterceptor" class="org.training.interceptors.HybridsCustomersPrepareInterceptor">
+        <property name="userGroupDao" ref="userGroupDao"/>
+    </bean>
+
+    <bean id="hybridCustomersPrepareInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
+        <property name="interceptor" ref="hybridCustomersPrepareInterceptor"/>
+        <property name="typeCode" value="Customer"/>
+    </bean>
 </beans>

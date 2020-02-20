@@ -16,6 +16,8 @@
     <context:annotation-config/>
     <context:component-scan base-package="org.training"/>
 
+    <import resource="classpath:/questions/integration/hot-folder-questions-spring.xml" />
+
     <bean id="questionsCoreDataImportedEventListener" parent="abstractCoreDataImportedEventListener">
         <property name="supportedChannels">
             <list value-type="de.hybris.platform.commerceservices.enums.SiteChannel">

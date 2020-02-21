@@ -1,9 +1,7 @@
 package org.training.facades;
 
-import de.hybris.platform.cmsfacades.data.ProductData;
-import de.hybris.platform.core.model.product.ProductModel;
 
-import java.util.List;
+import de.hybris.platform.commercefacades.product.data.ProductData;
 
 public interface QuestionFacade {
     ProductData getProductDataWithQuestions(String productCode);

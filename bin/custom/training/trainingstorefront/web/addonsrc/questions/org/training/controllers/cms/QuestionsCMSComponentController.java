@@ -1,9 +1,7 @@
 package org.training.controllers.cms;
 
 import de.hybris.platform.addonsupport.controllers.cms.AbstractCMSAddOnComponentController;
-import de.hybris.platform.cms2.model.contents.components.AbstractCMSComponentModel;
-import de.hybris.platform.cmsfacades.data.ProductData;
-import de.hybris.platform.core.model.product.ProductModel;
+import de.hybris.platform.commercefacades.product.data.ProductData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

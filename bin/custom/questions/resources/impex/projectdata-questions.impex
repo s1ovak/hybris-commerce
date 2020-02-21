@@ -7,6 +7,6 @@ $catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[d
 
 
 INSERT_UPDATE Question; code[unique = true]; question                                ; answer                         ; questionCustomer(uid); answerCustomer(uid); product(code, $catalogVersion)
-                      ; A001               ; How can i see my cart?                  ; You can click minicart button. ; anonymous            ; anonymous          ; 8796229369857
-                      ; A002               ; What is plp?                            ; Product List Page              ; anonymous            ; anonymous          ;
-                      ; A003               ; Who can help me with money transaction? ; You cat write to support       ; anonymous            ; anonymous          ;
+                      ; A001               ; How can i see my cart?                  ; You can click minicart button. ; anonymous            ; anonymous          ; 300938
+                      ; A002               ; What is plp?                            ; Product List Page              ; anonymous            ; anonymous          ; 1992693
+                      ; A003               ; Who can help me with money transaction? ; You cat write to support       ; anonymous            ; anonymous          ; 1992693

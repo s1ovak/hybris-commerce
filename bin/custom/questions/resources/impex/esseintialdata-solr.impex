@@ -1,0 +1,26 @@
+$solrIndexedType = electronicsProductType
+
+INSERT_UPDATE SolrIndexedProperty; solrIndexedType(identifier)[unique = true]; name[unique = true]; displayName; type(code); sortableType(code); currency[default = false]; localized[default = false]; multiValue[default = false]; facet[default = true]; facetType(code); facetSort(code); priority; visible; useForSpellchecking[default = false]; useForAutocomplete[default = false]; fieldValueProvider              ; facetDisplayNameProvider; customFacetSortProvider; valueProviderParameter; topValuesProvider; rangeSets(name);
+                                 ; $solrIndexedType                          ; questionCount      ; Question   ; int       ; int               ;                          ;                           ;                            ; true                 ; MultiSelectOr  ; Count          ; 2000    ; true   ;                                     ;                                    ; modelPropertyFieldValueProvider ;                         ;                        ; questionCount         ;                  ; questionRange  ;
+
+INSERT_UPDATE SolrValueRangeSet; name[unique = true]; qualifier; type; solrValueRanges(&rangeValueRefID)
+                               ; questionRange      ; default  ; int ; questionCountRange1,questionCountRange2
+
+INSERT_UPDATE SolrValueRange; &rangeValueRefID    ; solrValueRangeSet(name)[unique = true]; name[unique = true]; from; to
+                            ; questionCountRange1 ; questionRange                         ; 0-1                ; 0   ; 1
+                            ; questionCountRange2 ; questionRange                         ; 2-3                ; 2   ; 3
+
+INSERT_UPDATE SolrSearchQueryProperty; indexedProperty(name, solrIndexedType(identifier))[unique = true]; facet[default = true]; facetType(code); priority; facetDisplayNameProvider; facetSortProvider; facetTopValuesProvider   ; includeInResponse[default = true]; searchQueryTemplate(name, indexedType(identifier))[unique = true][default = DEFAULT:$solrIndexedType]
+                                     ; questionCount:$solrIndexedType                                   ;                      ; MultiSelectOr  ; 10000   ;                         ;                  ; defaultTopValuesProvider ;
+
+#########################################
+
+INSERT_UPDATE SolrSort; indexedType(identifier)[unique = true]; code[unique = true]; useBoost; name
+                      ; $solrIndexedType                      ; question-asc       ; false   ; Questions (asc)
+                      ; $solrIndexedType                      ; question-desc      ; false   ; Questions (desc)
+
+INSERT_UPDATE SolrSortField; sort(indexedType(identifier), code)[unique = true]; fieldName[unique = true]; ascending[unique = true]
+                           ; $solrIndexedType:question-asc                     ; questionCount           ; true
+                           ; $solrIndexedType:question-desc                    ; questionCount           ; false
+
+

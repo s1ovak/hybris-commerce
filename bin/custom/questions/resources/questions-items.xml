@@ -73,5 +73,27 @@
 				</attribute>
             </attributes>
         </itemtype>
+
+        <itemtype code="Product" generate="false" autocreate="false">
+            <attributes>
+                <attribute qualifier="questionCount" type="java.lang.Integer">
+                    <description>number of questions for product</description>
+                    <defaultvalue>0</defaultvalue>
+                    <modifiers optional="true" read="true" write="false"/>
+                    <persistence type="dynamic" attributeHandler="questionCountAttributeHandler"/>
+                </attribute>
+            </attributes>
+        </itemtype>
+        
+        <itemtype code="Customer" generate="false" autocreate="false">
+            <attributes>
+                <attribute qualifier="isInternal" type="java.lang.Boolean">
+                    <description>flag to indicate if user is internal</description>
+                    <defaultvalue>false</defaultvalue>
+                    <persistence type="dynamic" attributeHandler="dynamicHybrisCustomerAttributeBean"/>
+                    <modifiers read="true" write="true" optional="true"/>
+                </attribute>
+            </attributes>
+        </itemtype>
     </itemtypes>
 </items>

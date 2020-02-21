@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 10 февр. 2020 г., 12:21:12                  ---
+ * --- Generated at 21 февр. 2020 г., 12:31:04                  ---
  * ----------------------------------------------------------------
  */
 package org.training.jalo;
@@ -17,6 +17,7 @@ import de.hybris.platform.jalo.product.Product;
 import de.hybris.platform.jalo.type.CollectionType;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import de.hybris.platform.jalo.user.User;
 import de.hybris.platform.util.OneToManyHandler;
 import java.util.HashMap;
 import java.util.Map;

@@ -1,0 +1,19 @@
+$storeUid = electronics
+$pickupInStoreMode = BUY_AND_COLLECT
+$productCatalog = electronicsProductCatalog
+
+$gliwiceLatitude=50.29230
+$gliwiceLongitude=18.66104
+$munchenLatitude=48.14434
+$munchenLongitude=11.55071
+
+INSERT_UPDATE BaseStore; uid[unique = true]; catalogs(id)    ; pickupInStoreMode(code)
+                       ; $storeUid         ; $productCatalog ; $pickupInStoreMode
+
+INSERT_UPDATE PointOfService; name[unique = true]; type(code); address(&addrID); latitude         ; longitude         ; geocodeTimestamp[dateformat = dd-MM-yyyy]; basestore(uid); warehouses(code);
+                            ; electronics Gliwice ; STORE     ; addr1001        ; $gliwiceLatitude ; $gliwiceLongitude ; 29-04-2011                               ; $storeUid     ; warehouse_n     ;
+                            ; electronics Munchen ; STORE     ; addr1002        ; $munchenLatitude ; $munchenLongitude ; 29-04-2011                               ; $storeUid     ; warehouse_n     ;
+
+INSERT_UPDATE Address; &addrID  ; streetname        ; streetnumber; postalcode[unique = true]; town[unique = true]; country(isocode); region(isocode); phone1; owner(PointOfService.name)[unique = true]
+                     ; addr1001 ; Zygmunta Starego  ; 11          ; 44-100                   ; Gliwice            ; PL              ;                ;       ; electronics Gliwice ;
+                     ; addr1002 ; Nymphenburger Str ; 86          ; 80636                    ; Munchen            ; DE              ;                ;       ; electronics Munchen ;

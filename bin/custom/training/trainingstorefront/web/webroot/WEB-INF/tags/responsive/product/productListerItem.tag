@@ -25,7 +25,7 @@
 			<product:productPrimaryImage product="${product}" format="thumbnail"/>
 		</a>
 
-		<c:if test="${product.questionCount > 0}">
+		<c:if test="${product.questionCount != '0-1'}">
 			<spring:theme code="img.discussedImage" text="" var="discussedImage"/>
 			<img src="/trainingstorefront/_ui/responsive/theme-lambda/images/discussed.png"/>
 		</c:if>

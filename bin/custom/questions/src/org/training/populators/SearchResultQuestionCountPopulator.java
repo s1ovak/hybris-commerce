@@ -14,6 +14,6 @@ public class SearchResultQuestionCountPopulator implements Populator<SearchResul
     public void populate(SearchResultValueData searchResultValueData, ProductData productData) throws ConversionException {
         Assert.notNull(searchResultValueData, "Parameter searchResultValueData cannot be null.");
         Assert.notNull(productData, "Parameter productData cannot be null.");
-        productData.setQuestionCount((Integer) searchResultValueData.getValues().get("questionCount"));
+        productData.setQuestionCount((String) searchResultValueData.getValues().get("questionCount"));
     }
 }

@@ -10,6 +10,6 @@ import org.springframework.stereotype.Component;
 public class QuestionCountPopulator implements Populator<ProductModel, ProductData> {
     @Override
     public void populate(ProductModel productModel, ProductData productData) throws ConversionException {
-        productData.setQuestionCount(productModel.getQuestionCount());
+        productData.setQuestionCount(productModel.getQuestionCount().toString());
     }
 }

@@ -19,6 +19,6 @@
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<description>extending dto to include questions</description>
 		<property name="questions" type="java.util.List&lt;questions.data.QuestionData&gt;"/>
-		<property name="questionCount" type="java.lang.Integer"/>
+		<property name="questionCount" type="java.lang.String"/>
 	</bean>
 </beans>
